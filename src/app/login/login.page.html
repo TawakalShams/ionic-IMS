@@ -1,0 +1,48 @@
+<ion-content class="container">
+  <div id="header">
+    <h1 align="center">Insuarance Management System</h1>
+    <img src="assets/ZIC.jpg" />
+  </div>
+
+  <form [formGroup]="ionicForm">
+    <ion-item>
+      <ion-label position="floating">Platenumber</ion-label>
+      <ion-input formControlName="platenumber" type="text"></ion-input>
+      <ion-icon name="person" color="primary" slot="end"></ion-icon>
+    </ion-item>
+    <br />
+    <div
+      *ngIf="ionicForm.get('platenumber').invalid && (ionicForm.get('platenumber').dirty ||ionicForm.get('platenumber').touched )"
+    >
+      <span *ngIf="(ionicForm.get('platenumber')).errors?.required" id="error"
+        >Platenumber is required</span
+      >
+    </div>
+
+    <ion-item>
+      <ion-label position="floating">Password</ion-label>
+      <ion-input type="password" formControlName="password"></ion-input>
+      <ion-icon name="lock-closed" color="primary" slot="end"></ion-icon>
+    </ion-item>
+    <!-- show error -->
+    <br />
+    <div
+      *ngIf="ionicForm.get('password').invalid && (ionicForm.get('password').dirty ||ionicForm.get('password').touched )"
+    >
+      <span *ngIf="(ionicForm.get('password')).errors?.required" id="error"
+        >Password is required</span
+      >
+    </div>
+
+    <!-- end -->
+    <br />
+    <ion-button
+      expand="block"
+      shape="round"
+      color="primary"
+      (click)="submitForm()"
+      [disabled]="!ionicForm.valid"
+      >Login</ion-button
+    >
+  </form>
+</ion-content>

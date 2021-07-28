@@ -1,0 +1,133 @@
+<!-- <ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button color="primary">
+        <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+      </ion-button>
+      <span class="toolbar-spacer"></span>
+      <span>{{ fullName }}</span>
+      <ion-button color="primary" style="float: right">
+        <ion-icon slot="icon-only" name="power"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header> -->
+<ion-header>
+  <ion-toolbar>
+    <ion-title align="end">
+      {{ fullName }}
+
+      <ion-icon name="person-circle-outline" color="primary"></ion-icon>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-fab vertical="top" horizontal="end" slot="fixed">
+    <ion-fab-button>
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+
+    <ion-fab-list side="top">
+      <ion-fab-button><ion-icon name="logo-vimeo"></ion-icon></ion-fab-button>
+    </ion-fab-list>
+
+    <ion-fab-list side="start">
+      <ion-fab-button><ion-icon name="logo-vimeo"></ion-icon></ion-fab-button>
+    </ion-fab-list>
+
+    <ion-fab-list side="bottom">
+      <ion-fab-button (click)="logout()"
+        ><ion-icon name="power"></ion-icon
+      ></ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+
+  <!-- <table class="table table-stripe">
+    <tr>
+      <th>Username</th>
+    </tr>
+    <tr>
+      <th>Address</th>
+    </tr>
+    <tr>
+      <th>Phone</th>
+    </tr>
+    <tr>
+      <th>Platenumber</th>
+    </tr>
+    <tr>
+      <th>Type of Insuarance</th>
+    </tr>
+    <tr>
+      <th>Value</th>
+    </tr>
+    <tr>
+      <th>Start date</th>
+    </tr>
+    <tr>
+      <th>Expired date</th>
+    </tr>
+  </table> -->
+  <!-- List of Text Items -->
+  <ion-list>
+    <ion-item>
+      <ion-label
+        >FullName
+        <span class="ion-float-right"> {{ fullName }}</span></ion-label
+      >
+    </ion-item>
+    <ion-item>
+      <ion-label
+        >Address <span class="ion-float-right"> {{ address}}</span></ion-label
+      >
+    </ion-item>
+    <ion-item>
+      <ion-label
+        >Phone <span class="ion-float-right">{{ phone }}</span></ion-label
+      >
+    </ion-item>
+    <ion-item>
+      <ion-label
+        >Platenumber
+        <span class="ion-float-right">{{ platenumber }}</span></ion-label
+      >
+    </ion-item>
+    <ion-item>
+      <ion-label
+        >Model<span class="ion-float-right"> {{ model }}</span></ion-label
+      >
+    </ion-item>
+    <ion-item>
+      <ion-label
+        >Value
+        <span class="ion-float-right"
+          >Tzs &nbsp;{{ value| number }}</span
+        ></ion-label
+      >
+    </ion-item>
+    <ion-item>
+      <ion-label
+        >Type of Insuarance
+        <span class="ion-float-right">{{ typeOfInsuarance }}</span></ion-label
+      >
+    </ion-item>
+    <ion-item>
+      <ion-label
+        >Issue Date
+        <span class="ion-float-right">{{ startdate }}</span></ion-label
+      >
+    </ion-item>
+    <ion-item>
+      <ion-label
+        >Expired Date
+        <span class="ion-float-right">{{ enddate }}</span></ion-label
+      >
+    </ion-item>
+  </ion-list>
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-title align="center"><b>Zanzibar Insuarance Coperation</b> </ion-title>
+  </ion-toolbar>
+</ion-footer>

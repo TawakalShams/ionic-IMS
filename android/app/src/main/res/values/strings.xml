@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">IMS USER ANDROID</string>
+    <string name="title_activity_main">IMS USER ANDROID</string>
+    <string name="package_name">zic.com</string>
+    <string name="custom_url_scheme">zic.com</string>
+</resources>
