@@ -10,6 +10,22 @@ const routes: Routes = [
     canActivate: [AuthGuard],
   },
   {
+    path: "insuarance",
+    loadChildren: () =>
+      import("./insuarance/insuarance.module").then(
+        (m) => m.InsuarancePageModule
+      ),
+    canActivate: [AuthGuard],
+  },
+  {
+    path: "about",
+    loadChildren: () =>
+      import("./about/about-routing.module").then(
+        (m) => m.AboutPageRoutingModule
+      ),
+    canActivate: [AuthGuard],
+  },
+  {
     path: "",
     redirectTo: "login",
     pathMatch: "full",
@@ -19,6 +35,18 @@ const routes: Routes = [
     path: "login",
     loadChildren: () =>
       import("./login/login.module").then((m) => m.LoginPageModule),
+  },
+  {
+    path: "insuarance",
+    loadChildren: () =>
+      import("./insuarance/insuarance.module").then(
+        (m) => m.InsuarancePageModule
+      ),
+  },
+  {
+    path: "about",
+    loadChildren: () =>
+      import("./about/about.module").then((m) => m.AboutPageModule),
   },
 ];
 

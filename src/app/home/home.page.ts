@@ -41,6 +41,13 @@ export class HomePage implements OnInit {
     this.platenumber = decodedToken.platenumber;
     // console.log("this" + this.platenumber);
   }
+  Insuarance() {
+    this.router.navigateByUrl("insuarance");
+  }
+  about() {
+    this.router.navigateByUrl("about");
+  }
+
   ngOnInit() {
     this.service.viewInsuarance().subscribe((res) => {
       const mystatus: any = res;

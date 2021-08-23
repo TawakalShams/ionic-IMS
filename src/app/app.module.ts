@@ -19,13 +19,14 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { CommonModule } from "@angular/common";
 import { HttpClientModule } from "@angular/common/http";
 import { JwtModule } from "@auth0/angular-jwt";
+import { DashboardPipe } from "./dashboard.pipe";
 
 export const tokenGetter = () => {
   return localStorage.getItem("token");
 };
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, DashboardPipe],
   entryComponents: [],
   imports: [
     BrowserModule,
